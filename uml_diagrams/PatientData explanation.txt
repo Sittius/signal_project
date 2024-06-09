@@ -1,0 +1,3 @@
+The data of PatientData is managed by the DataStorage class. This class can store, delete and retrieve data from specific patients.
+This retrieval of data is fascilitated by the DataRetriever class.
+This data first has to be requested, but before the Retreiver class gives the patient information, the request first has to be validated by the Authenticator class.

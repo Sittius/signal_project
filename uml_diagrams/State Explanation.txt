@@ -1,0 +1,4 @@
+The initial state starts with the monitoring system monitoring patient data. This system transitions when an alert worthy condition is detected.
+In that case, an alert is generated, the system transitions to send the alert to the staff. The staff receives this message and the system then transitions
+by the staff acting on the alert.
+Once acted upon, the system transitions back to the initial state where the monitoring system goes back to monitoring data until an alert is generated again.

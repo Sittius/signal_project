@@ -1,0 +1,3 @@
+The alert generator gets information from the various patient monitoring systems. When condition for alerts are met, the alertGenerator sends information to the Alert class.
+This class sends information about the specific patient, their condition and time of alert to the alertManager, which actually sends the alert. 
+The manager also stores the alert in the DataStorage for the specific patient.

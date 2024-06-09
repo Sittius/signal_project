@@ -1,0 +1,4 @@
+There are three possible types of data that this system can handle: Files, WebSocket data and TCP data.
+These classes listen for patientdata in there respective data types.
+If they detect an event, this data is sent to the DataParser, which standardizes all three types to one specific one which the following class is expecting.
+The DataSourceAdapter takes the standardized data and either processes it further, or stores it in the DataStorage class that is central in the patientData system.
