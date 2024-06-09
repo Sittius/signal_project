@@ -4,16 +4,32 @@ import java.util.Random;
 
 import com.cardio_generator.outputs.OutputStrategy;
 
+/**
+ * Generates alerts for patients based on probability 
+ */
+
 public class AlertGenerator implements PatientDataGenerator {
 
     public static final Random randomGenerator = new Random();
     private boolean[] alertSpaces; // false = resolved, true = pressed
 
+    /**
+     * Creates a AlertGenerator for a given number of patients
+     * @param patientCount The number of patients to create generators for
+     */
+
     public AlertGenerator(int patientCount) {
-        //CHanged variable name to lowerCamelCase
+        //Changed variable name to lowerCamelCase
         alertSpaces = new boolean[patientCount + 1];
     }
 
+    /**
+     * Generates random alerts for a specific patients.
+     * The alert has a 90% chance to resolve and a 10% to trigger
+     * 
+     * @param patientID The specific patient to generate alerts for
+     * @param outputStrategy The specific form in which the data is outputted(files,TCP,WebSockets or Console)
+     */
     @Override
     public void generate(int patientId, OutputStrategy outputStrategy) {
         try {
